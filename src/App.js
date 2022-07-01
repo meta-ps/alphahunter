@@ -24,7 +24,7 @@ function App() {
         connectionMetaplex,
         t_walletAddress
       );
-
+      console.log(t_walletAddress);
       setData(nftsmetadata);
 
       let imagesData = [];
@@ -44,17 +44,17 @@ function App() {
       });
 
       setImage(imagesData);
-    } catch (err) {}
+    } catch (err) { }
   }
 
   return (
     <div>
       <h1>Test</h1>
-      <button onClick={connectWallet}>Connect to Wallet</button>
+      <button onClick={connectWallet} className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">Connect to Wallet</button>
       {image &&
         image.map((el) => {
           return (
-            <div key={el.name}>
+            <div key={el.name} >
               <p>{el.name}</p>
               <img src={el.image} alt={el.name} width="100px" height="100px" />
             </div>
