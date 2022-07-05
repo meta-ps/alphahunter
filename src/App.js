@@ -56,11 +56,9 @@ function App() {
         {buttonHidden && <button onClick={connectWallet} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Connect to Wallet</button>}
       </div>
       <div>
-        <h1>Test</h1>
 
         <div className="container my-12 mx-auto px-4 md:px-12">
           <div className="flex flex-wrap -mx-1 lg:-mx-4">
-
 
             {image &&
               image.map((el) => {
@@ -73,6 +71,7 @@ function App() {
                     </a>
 
                     <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+
                       <h1 className="text-lg">
                         <a className="no-underline hover:underline text-black" href="#">
                           {el.name}
